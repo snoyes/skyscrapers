@@ -27,32 +27,32 @@ def test_cyclic_equiv_false():
     assert tools.cyclicEquiv(l1, l2) == False
 
 def test_list_views():
-    cityBlock = []
-    cityBlock.append([3, 1, 4, 2])
-    cityBlock.append([4, 3, 2, 1])
-    cityBlock.append([2, 4, 1, 3])
-    cityBlock.append([1, 2, 3, 4])
+    city = []
+    city.append([3, 1, 4, 2])
+    city.append([4, 3, 2, 1])
+    city.append([2, 4, 1, 3])
+    city.append([1, 2, 3, 4])
 
     correctView = [2, 1, 2, 4, 3, 2, 2, 1, 1, 2, 4, 2, 3, 1, 3, 2]
 
-    assert tools.listViews(cityBlock) == correctView
+    assert tools.listViews(city) == correctView
 
 def test_extract_column():
-    cityBlock = []
-    cityBlock.append([3, 1, 4, 2])
-    cityBlock.append([4, 3, 2, 1])
-    cityBlock.append([2, 4, 1, 3])
-    cityBlock.append([1, 2, 3, 4])
+    city = []
+    city.append([3, 1, 4, 2])
+    city.append([4, 3, 2, 1])
+    city.append([2, 4, 1, 3])
+    city.append([1, 2, 3, 4])
 
-    assert tools.extractColumn(cityBlock, 2) == [4, 2, 1, 3]
+    assert tools.extractColumn(city, 2) == [4, 2, 1, 3]
 
 def test_reflection_equal():
-    cityBlock1 = []
-    cityBlock1.append([3, 1, 4, 2])
-    cityBlock1.append([4, 3, 2, 1])
-    cityBlock1.append([2, 4, 1, 3])
-    cityBlock1.append([1, 2, 3, 4])
+    city1 = []
+    city1.append([3, 1, 4, 2])
+    city1.append([4, 3, 2, 1])
+    city1.append([2, 4, 1, 3])
+    city1.append([1, 2, 3, 4])
 
-    cityBlock2 = cityBlock1[::-1]
+    city2 = city1[::-1]
 
-    assert tools.citiesEqual(cityBlock1, cityBlock2) == True
+    assert tools.citiesEqual(city1, city2) == True
