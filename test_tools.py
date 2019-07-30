@@ -53,6 +53,14 @@ def test_reflection_equal():
     city1.append([2, 4, 1, 3])
     city1.append([1, 2, 3, 4])
 
-    city2 = city1[::-1]
+    city2 = []
+    city2.append([1, 2, 4, 3])
+    city2.append([2, 4, 3, 1])
+    city2.append([3, 1, 2, 4])
+    city2.append([4, 3, 1, 2])
+
+
+    print(tools.listViews(city1))
+    print(tools.listViews(city2))
 
     assert tools.citiesEqual(city1, city2) == True

@@ -29,9 +29,10 @@ def cyclicEquiv(u, v):
 
 def citiesEqual(city1, city2):
     view1 = listViews(city1)
+    view1 = [view1[i:i+4] for i in range(0, len(view1), 4)]
     view2 = listViews(city2)
+    view2 = [view2[i:i+4] for i in range(0, len(view2), 4)]
     return cyclicEquiv(view1, view2) or cyclicEquiv(view1, view2[::-1])
-
 
 def listViews(city):
     views = []
